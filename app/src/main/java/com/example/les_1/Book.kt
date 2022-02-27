@@ -11,8 +11,6 @@ open class Book(override var price: Int, override var wordCount: Int) : Publicat
     }
 
     override fun equals(other: Any?): Boolean {
-        print("Сравнение по ссылке: ${this === other} \n" )
-        print("Сравнение методом: " + super.equals(other) + "\n" )
-        return super.equals(other)
+        return (other is Book && (other.price == price && other.wordCount == wordCount))
     }
 }

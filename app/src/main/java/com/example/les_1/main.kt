@@ -21,7 +21,8 @@ fun main() {
     print("Тип = " + CarsAndRacing.getType() + "\n\n")
 
     print("\n\n\n equals Book: \"История Ульяновск\" vs \"О чашке чая\"\n")
-    UlyanovskHistory.equals(AboutCupOfTea)
+    println(UlyanovskHistory === AboutCupOfTea)
+    println(UlyanovskHistory.equals(AboutCupOfTea))
     print("\n\n\n")
 
 
@@ -71,21 +72,21 @@ fun main() {
     print("Имя первого ${firstname} \n")
     print("Имя последнего ${lastname} \n")
     print("\n\n\n")
-    doAction(Registration())
-    doAction(Login(User(users.last().id + 1, "Roman", 19, Type.DEMO)))
-    doAction(Logout())
+    doAction(Action.Registration())
+    doAction(Action.Login(User(users.last().id + 1, "Roman", 19, Type.DEMO)))
+    doAction(Action.Logout())
 
 }
 
 fun doAction(action: Action) {
 
     when (action) {
-        is Registration -> print("Registration in process\n")
-        is Logout -> print("Logout in process\n")
-        is Login -> {
-            val login: Login = action
+        is Action.Registration -> print("Registration in process\n")
+        is Action.Logout -> print("Logout in process\n")
+        is Action.Login -> {
+            val login: Action.Login = action
             print("Login is started\n")
-            auth({ print("Кэша пока не реализован")}, login.user)
+            auth({ print("Кэша пока не реализован\n")}, login.user)
         }
     }
 }
