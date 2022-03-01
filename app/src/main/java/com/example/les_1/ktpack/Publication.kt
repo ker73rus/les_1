@@ -1,4 +1,4 @@
-package com.example.les_1
+package com.example.les_1.ktpack
 
 interface Publication{
     var price: Int

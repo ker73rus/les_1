@@ -1,4 +1,4 @@
-package com.example.les_1
+package com.example.les_1.ktpack
 
 abstract class Action {
     class Login(val user: User): Action()

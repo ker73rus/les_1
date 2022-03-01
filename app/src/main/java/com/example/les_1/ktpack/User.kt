@@ -1,7 +1,7 @@
-package com.example.les_1
+package com.example.les_1.ktpack
 
-import java.util.*
-import kotlin.reflect.KProperty
+import java.util.Calendar
+import java.util.Date
 
 data class User(
     val id:Int,

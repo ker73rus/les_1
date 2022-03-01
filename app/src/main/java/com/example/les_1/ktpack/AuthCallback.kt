@@ -1,4 +1,4 @@
-package com.example.les_1
+package com.example.les_1.ktpack
 
 interface AuthCallback{
     fun authSuccess()

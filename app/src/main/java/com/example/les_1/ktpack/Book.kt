@@ -1,4 +1,4 @@
-package com.example.les_1
+package com.example.les_1.ktpack
 
 open class Book(override var price: Int, override var wordCount: Int) : Publication {
     override fun getType(): String {
