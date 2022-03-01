@@ -1,4 +1,4 @@
-package com.example.les_1.ktpack
+package com.example.les_1
 
 fun main() {
     val UlyanovskHistory = Book(85, 6900)
@@ -90,7 +90,7 @@ fun doAction(action: Action) {
         }
     }
 }
-val callback =  object: AuthCallback {
+val callback =  object:AuthCallback {
     override fun authFailed() {
         print("Auth провален\n")
     }
